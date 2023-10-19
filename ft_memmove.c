@@ -6,7 +6,7 @@
 /*   By: ldel-rio <ldel-rio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:03:58 by ldel-rio          #+#    #+#             */
-/*   Updated: 2023/09/29 15:29:12 by ldel-rio         ###   ########.fr       */
+/*   Updated: 2023/10/02 16:53:42 by ldel-rio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,24 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*d;
 	unsigned char	*s;
 
+	if (!dst && !src)
+		return (dst);
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	i = 0;
-	if (s < d)
+	i = -1;
+	if (s > d)
 	{
-		while (i < (int)len)
-		{
+		while (++i < (int)len)
 			d[i] = s[i];
-			i++;
-		}
 	}
 	else
-		ft_memcpy(d, s, len);
+	{
+		while (len > 0)
+		{
+			d[len - 1] = s[len - 1];
+			len--;
+		}
+	}
 	return (dst);
 }
 	/*else
