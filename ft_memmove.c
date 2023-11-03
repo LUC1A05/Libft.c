@@ -6,7 +6,7 @@
 /*   By: ldel-rio <ldel-rio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:03:58 by ldel-rio          #+#    #+#             */
-/*   Updated: 2023/10/02 16:53:42 by ldel-rio         ###   ########.fr       */
+/*   Updated: 2023/11/03 13:28:09 by ldel-rio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-	/*else
-	{
-		i = len - 1;
-		if (len == 0 || dst == src)
-			return (dst);
-		while (i >= 0)
-		{
-			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-			i--;
-		}
-	}*/
